@@ -12,8 +12,8 @@ public class Queen : IPiece
         OnBoard = true;
     }
 
-    public List<int[,]> GetPossibleMoves(int[,] currentPosition) => new List<int[,]>
+    public List<(int, int)> GetPossibleMoves( (int, int) currentPosition) => new List<(int, int)>
         {
-           
+           //rook + bishop
         };
 }

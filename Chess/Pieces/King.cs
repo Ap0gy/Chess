@@ -14,21 +14,8 @@ public class King : IPiece
         HasMoved = false;
     }
 
-    public List<int[,]> GetPossibleMoves(int[,] currentPosition) => new List<int[,]>
-        {
-            new int[currentPosition[0, 0] + 1, currentPosition[1, 0]],
-            new int[currentPosition[0, 0] - 1, currentPosition[1, 0]],
-
-            new int[currentPosition[0, 0], currentPosition[1, 0] + 1],
-            new int[currentPosition[0, 0], currentPosition[1, 0] - 1],
-
-            new int[currentPosition[0, 0] -1, currentPosition[1, 0] + 1],
-            new int[currentPosition[0, 0] -1, currentPosition[1, 0] - 1],
-
-            new int[currentPosition[0, 0] + 1, currentPosition[1, 0] + 1],
-            new int[currentPosition[0, 0] + 1, currentPosition[1, 0] - 1],
-
-            new int[currentPosition[0, 0] + 2, currentPosition[1, 0]],
-            new int[currentPosition[0, 0] + 2, currentPosition[1, 0]]
+    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    {
+            //1 adjacent square any direction
         };
 }

@@ -14,11 +14,11 @@ public class Pawn : IPiece
         HasMoved = false;
     }
 
-    public List<int[,]> GetPossibleMoves(int[,] currentPosition) => new List<int[,]>
-        {
-            new int[currentPosition[0 , 0], currentPosition[1 , 0] + Colour],
-            new int[currentPosition[0 , 0], currentPosition[1 , 0] + 2*Colour],
-            new int[currentPosition[0 , 0] + 1, currentPosition[1 , 0] + Colour],
-            new int[currentPosition[0 , 0] - 1, currentPosition[1 , 0] + Colour]
+    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    {
+            //Two forward (if not moved)
+            //One forward
+            //One diagonal forward (if taking)
+            //En passant?
         };
 }

@@ -3,15 +3,12 @@
 public class Board
 {
 
-    static public void CreateBoard(int size)
-    {       
-        
-        int[,] board = new int[size, size];
+    private Board(int dimensionX, int dimensionY)
+    {
 
-
-
-
+        Coords[] boardArray = new Coords[dimensionX*dimensionY];
     }
-
-
 }
+
+public record Coords(int x, int y)
+{ }
