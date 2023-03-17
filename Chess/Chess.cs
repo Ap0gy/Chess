@@ -4,12 +4,12 @@ namespace Chess
 {
     public class Chess
     {
-        void UpdatePosition(IPiece piece, int[,] newPosition)
+        void UpdatePosition(Piece piece, Coords newPosition)
         { }
 
-        List<(IPiece, int[,])> GetPiecePositions()
+        public Coords GetPiecePositions(Piece piece)
         {
-            return new List<(IPiece, int[,])>();
+            return new Coords(1, 1);
         }
     }
 }
