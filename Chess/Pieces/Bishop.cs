@@ -13,8 +13,10 @@ public class Bishop : IPiece
         OnBoard = true;
     }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    public List<Coords> GetPossibleMoves(Coords piecePosition)
     {
-            //any diagonal (1x1, 2x2, -1x-1 etc)
-        };
+        return new List<Coords>();
+        //any diagonal (1x1, 2x2, -1x-1 etc)
+            
+    }
 }

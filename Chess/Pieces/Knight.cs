@@ -11,8 +11,9 @@ public class Knight : IPiece
         OnBoard = true;
     }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    public List<Coords> GetPossibleMoves(Coords piecePosition)
     {
-            // |_ or _| rotations (2 NESW, 1 perpendicular)
-        };
+        return new List<Coords>();
+        // |_ or _| rotations (2 NESW, 1 perpendicular)
+    }
 }

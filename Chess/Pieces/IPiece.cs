@@ -6,6 +6,6 @@ public interface IPiece
 
     public bool OnBoard { get; set; }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)> ();
+    public List<Coords> GetPossibleMoves(Coords piecePosition);
 
 }

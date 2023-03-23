@@ -14,11 +14,12 @@ public class Pawn : IPiece
         HasMoved = false;
     }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    public List<Coords> GetPossibleMoves(Coords piecePosition)
     {
-            //Two forward (if not moved)
-            //One forward
-            //One diagonal forward (if taking)
-            //En passant?
-        };
+        return new List<Coords>();
+        //Two forward (if not moved)
+        //One forward
+        //One diagonal forward (if taking)
+        //En passant?
+    }
 }

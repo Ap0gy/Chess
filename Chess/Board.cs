@@ -3,43 +3,56 @@
 namespace Chess;
 
 
-public sealed class Board
+public sealed class Board : IDisposable
 {
-    private static readonly Lazy<Board> lazy =
-        new Lazy<Board>(() => new Board());
+    Dictionary<Coords, Piece> chessBoard = new Dictionary<Coords, Piece>();
 
-    public static Board Instance { get { return lazy.Value; } }
-
-    private Board()
-    {
-        Dictionary<Coords, Piece> chessBoard = new Dictionary<Coords, Piece>();
-    }
-}
-
-public class BoardVisualizer
-{
-    public static void DisplayPieces(Dictionary<Coords, Piece> locationsCollection)
+    public void DisplayBoard()
     {
         for (var y = 7; y > -1; y--)
         {
             Console.Write("|");
             for (var x = 0; x < 8; x++)
             {
-                if (locationsCollection.ContainsKey(new Coords(x, y)))
+                if (chessBoard.ContainsKey(new Coords(x, y)))
                 {
                     Console.Write("x");
                 }
 
-                if (!locationsCollection.ContainsKey(new Coords(x, y)))
+                if (!chessBoard.ContainsKey(new Coords(x, y)))
                 {
                     Console.Write("-");
                 }
+
                 Console.Write("|");
             }
+
             Console.WriteLine();
         }
     }
 
+    public void AddPiece (Coords coordinate, Piece piece)
+    {
+        if (chessBoard.ContainsKey(coordinate) is false)
+        {
+            chessBoard.Add(coordinate, piece);
+        }
+    }
+    
+    public void RemovePiece(Coords coordinate)
+    {
+        chessBoard.Remove(coordinate);
+    }
+    
+    public void Dispose()
+    {
+        GC.Collect();
+    }
+
+}
+
+public class PieceMovesVisualizer
+{
     public static void DisplayMoves(List<Coords> possibleMovesCollection)
     {
         for (var y = 7; y > -1; y--)

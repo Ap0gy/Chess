@@ -14,8 +14,9 @@ public class King : IPiece
         HasMoved = false;
     }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    public List<Coords> GetPossibleMoves(Coords piecePosition)
     {
-            //1 adjacent square any direction
-        };
+        return new List<Coords>();
+        //1 adjacent square any direction
+    }
 }

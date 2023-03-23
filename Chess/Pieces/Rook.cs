@@ -14,8 +14,9 @@ public class Rook : IPiece
         HasMoved = false;
     }
 
-    public List<(int, int)> GetPossibleMoves((int, int) currentPosition) => new List<(int, int)>
+    public List<Coords> GetPossibleMoves(Coords piecePosition)
     {
-            //+
-        };
+        return new List<Coords>();
+        //+
+    }
 }
