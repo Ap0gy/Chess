@@ -29,5 +29,4 @@ public sealed class Board : IDisposable
     {
         GC.Collect();
     }
-
 }

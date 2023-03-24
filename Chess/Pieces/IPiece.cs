@@ -7,5 +7,4 @@ public interface IPiece
     public bool OnBoard { get; set; }
 
     public List<Coords> GetPossibleMoves(Coords piecePosition);
-
 }
