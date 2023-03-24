@@ -19,4 +19,9 @@ public class King : IPiece
         return new List<Coords>();
         //1 adjacent square any direction
     }
+
+    static void WouldPutOwnKingIntoCheck(Board currentBoard)
+    {
+
+    }
 }
