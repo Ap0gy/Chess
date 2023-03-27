@@ -4,7 +4,7 @@ namespace Chess;
 
 public class VisualizerEngine
 {
-    public static void DisplayLegalMoves(List<Coords> possibleMovesCollection)
+    public static void DisplayMoves(List<Coords> possibleMovesCollection)
     {
         for (var y = 7; y > -1; y--)
         {

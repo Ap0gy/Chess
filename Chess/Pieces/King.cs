@@ -1,6 +1,6 @@
 ﻿namespace Chess.Pieces;
 
-public class King : IPiece
+public class King
 {
     public int Colour { get; }
 
@@ -18,10 +18,5 @@ public class King : IPiece
     {
         return new List<Coords>();
         //1 adjacent square any direction
-    }
-
-    static void WouldPutOwnKingIntoCheck(Board currentBoard)
-    {
-
     }
 }

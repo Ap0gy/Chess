@@ -1,6 +1,6 @@
 ﻿namespace Chess.Pieces;
 
-public class Pawn : IPiece
+public class Pawn
 {
     public int Colour { get; } //white = 1, black = -1
 

@@ -1,5 +1,5 @@
 ﻿namespace Chess.Pieces;
 
-public record Piece(IPiece piece, Colour colour, Coords position)
-{
+public abstract record Piece(Colour colour, Coords position)
+{ 
 }

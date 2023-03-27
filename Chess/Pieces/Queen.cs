@@ -1,6 +1,6 @@
 ﻿namespace Chess.Pieces;
 
-public class Queen : IPiece
+public class Queen
 {
     public int Colour { get; }
 
