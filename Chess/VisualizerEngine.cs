@@ -25,7 +25,7 @@ public class VisualizerEngine
             Console.WriteLine();
         }
     }
-    public static void DisplayBoard(Dictionary<Coords, Piece> chessBoard)
+    public static void DisplayPieces(Dictionary<Coords, Piece> chessBoard)
     {
         for (var y = 7; y > -1; y--)
         {
@@ -45,6 +45,32 @@ public class VisualizerEngine
                 Console.Write("|");
             }
 
+            Console.WriteLine();
+        }
+    }
+
+    public static void DisplayPieceAndPossibleMoves(List<Coords> possibleMovesCollection, Coords pieceCoordinate)
+    {
+        for (var y = 7; y > -1; y--)
+        {
+            Console.Write("|");
+            for (var x = 0; x < 8; x++)
+            {
+                if (pieceCoordinate.Equals(new Coords(x, y)))
+                {
+                    Console.Write("o");
+                }
+                if (possibleMovesCollection.Contains(new Coords(x, y)))
+                {
+                    Console.Write("x");
+                }
+
+                if (!possibleMovesCollection.Contains(new Coords(x, y)) && !pieceCoordinate.Equals(new Coords(x, y)))
+                {
+                    Console.Write("-");
+                }
+                Console.Write("|");
+            }
             Console.WriteLine();
         }
     }
