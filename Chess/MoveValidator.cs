@@ -1,5 +1,4 @@
 ﻿using Chess.Pieces;
-using static Chess.DirectionsDelegates;
 
 namespace Chess
 {
